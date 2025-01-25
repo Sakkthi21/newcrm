@@ -8,7 +8,7 @@ from .forms import RegisterForm, CustomerForm
 
 from .models import Customer
 
-# Create your views here.
+
 
 #----------------------DISPLAY RECORDS OR LOGIN--------------------
 def home(request):
