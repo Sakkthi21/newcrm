@@ -1,10 +1,3 @@
-﻿# Basic CRM
- 
- *Live link - https://basic-crm-app.onrender.com*
-
-UserName:ravi21
-Password:inventory@123
-
 # CRM Backend System - My Project
 
 This project represents my work on building the backend for a basic Customer Relationship Management (CRM) application.  I focused on creating a scalable, secure, and well-documented API to handle core CRM functionalities.
@@ -20,7 +13,9 @@ This project represents my work on building the backend for a basic Customer Rel
 * **(Optional) Pagination:**  I added pagination to the customer list API to improve performance when dealing with large datasets.  This allows clients to retrieve customer data in manageable chunks.
 * **(Optional) Role-Based Access Control:**  For added security and control, I've implemented role-based access control. This distinguishes between regular users and administrators, granting different permissions based on their roles.
 * **(Optional) Interaction Logging:**  I included APIs to log and retrieve customer interactions, such as notes, follow-up reminders, or other relevant activities.  This adds a valuable layer of functionality to the CRM.
+﻿# CRM
+ 
+ *Live link - https://basic-crm-app.onrender.com*
 
-## Getting Started - Setting up My Project
-
-These steps will guide you through setting up the project locally:
+UserName:ravi21
+Password:inventory@123
