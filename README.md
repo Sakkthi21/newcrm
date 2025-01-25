@@ -1,7 +1,10 @@
 ﻿# Basic CRM
  
  *Live link - https://basic-crm-app.onrender.com*
- 
+
+UserName:ravi21
+Password:inventory@123
+
 # CRM Backend System - My Project
 
 This project represents my work on building the backend for a basic Customer Relationship Management (CRM) application.  I focused on creating a scalable, secure, and well-documented API to handle core CRM functionalities.
