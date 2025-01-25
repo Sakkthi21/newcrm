@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<h1>Individual record</h1>
+
+
+<div class="card">
+    <div class="card-header">
+        <strong>{{customer}}</strong>
+    </div>
+    <div class="card-body">
+
+      <p class="card-text"><strong>Email:</strong> {{customer.email}}</p>
+
+      <p class="card-text"><strong>Phone:</strong> {{customer.phone}}</p>
+
+      <p class="card-text"><strong>Address:</strong> {{customer.address}}</p>
+
+      <p class="card-text"><strong>City:</strong> {{customer.city}}</p>
+
+      <p class="card-text"><strong>State:</strong> {{customer.state}}</p>
+
+      <p class="card-text"><strong>Joined:</strong> {{customer.created}}</p>
+    </div>
+
+</div>
+<br/>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+<a href="{% url 'delete' customer.id %}" class="btn btn-danger">Delete</a>
+<a href="{% url 'update' customer.id %}" class="btn btn-secondary">Update</a>
+
+
+{% endblock content %}

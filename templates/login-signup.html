@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+
+    <h1>Records...</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">address</th>
+          <th scope="col">city</th>
+          <th scope="col">state</th>
+          <th scope="col">pincode</th>
+          <th scope="col">created</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for customer in customers %} 
+        <tr>
+          <th scope="row"><a href="{% url 'customer' customer.id %}">{{customer.id}}</a></th>
+          <td>{{customer.first_name}} {{customer.last_name}}</td>
+          <td>{{customer.email}}</td>
+          <td>{{customer.phone}}</td>
+          <td>{{customer.address}}</td>
+          <td>{{customer.city}}</td>
+          <td>{{customer.state}}</td>
+          <td>{{customer.pincode}}</td>
+          <td>{{customer.created|timesince}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {% else %}
+
+    <div class="col-md-6 offset-md-3">
+
+      <h1>Login</h1>
+      <br>
+      
+      <form method="POST" action="{% url 'home' %}">
+        {% csrf_token %}
+
+        <div class="mb-3">
+          <input type="text" class="form-control" name="username" placeholder="Enter Username" required>
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" name="password" placeholder="Enter Password" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-secondary">Submit</button>
+      </form>
+
+    </div>
+
+    {% endif %}
+
+    {% endblock content %}
